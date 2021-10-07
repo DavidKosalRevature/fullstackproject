@@ -18,14 +18,16 @@
   </div>
 </div>
 
-<form #statusForm="ngForm" (submit)="onSubmit(statusForm.value)">
+<form #statusForm="ngForm">
     <div class="container">
         <div class="input-group">
             <div class="input-group-prepend">
             </div>
-            <textarea class="form-control" placeholder="Enter your post"></textarea>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="text" class="form-control" placeholder="Enter your post" #statusValue>
+            <button type="submit" class="btn btn-primary" (click)="onSubmit(statusValue.value)">Submit</button>
         </div>
+        
+        <h2>{{postedValue}}</h2>
 
     </div>
 </form>

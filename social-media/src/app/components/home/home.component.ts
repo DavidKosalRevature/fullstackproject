@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  postedValue="";
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(data: any){
-    console.log(data)
+  onSubmit(value:string){
+  console.log(value);
+  this.postedValue=value;
+
   }
 }
