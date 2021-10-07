@@ -12,4 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(data: any){
+    console.log(data)
+  }
 }
